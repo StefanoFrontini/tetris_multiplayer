@@ -11,5 +11,8 @@
     "start": "node server/main.js"
   },
   "author": "Stefano Frontini",
-  "license": "ISC"
+  "license": "ISC",
+  "engines": {
+    "node": "11.x"
+  }
 }
