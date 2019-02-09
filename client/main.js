@@ -17,7 +17,7 @@ localTetris.element.classList.add('local');
 localTetris.run();
 
 const connectionManager = new ConnectionManager(tetrisManager);
-connectionManager.connect('wss://enigmatic-falls-17146.herokuapp.com/');
+connectionManager.connect('ws://localhost' + window.location.hostname + ':9000');
 
 const keyListener = (e) => {
     [
