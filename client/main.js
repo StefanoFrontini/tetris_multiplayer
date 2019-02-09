@@ -17,9 +17,8 @@ localTetris.element.classList.add('local');
 localTetris.run();
 
 const connectionManager = new ConnectionManager(tetrisManager);
-const HOST = location.origin.replace(/^http/, 'ws')
-console.log(HOST);
-connectionManager.connect(HOST);
+// const HOST = location.origin.replace(/^http/, 'ws')
+connectionManager.connect(`wss://enigmatic-falls-17146.herokuapp.com:${location.port}`);
 
 const keyListener = (e) => {
     [
