@@ -17,8 +17,8 @@ localTetris.element.classList.add('local');
 localTetris.run();
 
 const connectionManager = new ConnectionManager(tetrisManager);
-// const HOST = location.origin.replace(/^http/, 'ws')
-connectionManager.connect(`ws://localhost:${location.port}`);
+const HOST = location.origin.replace(/^http/, 'ws')
+connectionManager.connect(HOST);
 
 const keyListener = (e) => {
     [
