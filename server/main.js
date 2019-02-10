@@ -5,8 +5,7 @@ const WebSocketServer = require('ws').Server;
 const Session = require('./session');
 const Client = require('./client');
 
-const http_server = http.createServer((req, res) => {
-    console.log(req.url);  
+const http_server = http.createServer((req, res) => {     
     // Build file path
     let filePath = path.join(
       __dirname,
@@ -39,8 +38,7 @@ const http_server = http.createServer((req, res) => {
         break;
     }
   
-    // Read File
-    console.log(filePath);
+    // Read File    
     fs.readFile(filePath, (err, content) => {
       if (err) {
         if (err.code == 'ENOENT') {
@@ -68,7 +66,6 @@ const http_server = http.createServer((req, res) => {
 const PORT = process.env.PORT || 9000;
   
 http_server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
 
 
 

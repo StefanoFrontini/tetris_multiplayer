@@ -1,25 +1,12 @@
-
-
-/*
-const sound = new Howl({
-    src: ['Tetris_theme.ogg'],
-    // autoplay: true,
-    loop: true,
-    volume: 0.5,
-  });
-  
-// sound.play();
-*/
-
 const tetrisManager = new TetrisManager(document);
 const localTetris = tetrisManager.createPlayer();
 localTetris.element.classList.add('local');
 localTetris.run();
 
 const connectionManager = new ConnectionManager(tetrisManager);
-// const HOST = location.origin.replace(/^http/, 'ws')
-connectionManager.connect('wss://enigmatic-falls-17146.herokuapp.com/');
-//console.log(`ws://${window.location.hostname}:9000`);
+
+connectionManager.connect('wss://{{yourdomain.com}}/');
+
 
 const keyListener = (e) => {
     [
