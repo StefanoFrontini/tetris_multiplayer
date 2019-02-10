@@ -18,7 +18,7 @@ localTetris.run();
 
 const connectionManager = new ConnectionManager(tetrisManager);
 // const HOST = location.origin.replace(/^http/, 'ws')
-connectionManager.connect('ws://enigmatic-falls-17146.herokuapp.com/');
+connectionManager.connect('wss://enigmatic-falls-17146.herokuapp.com/');
 //console.log(`ws://${window.location.hostname}:9000`);
 
 const keyListener = (e) => {
